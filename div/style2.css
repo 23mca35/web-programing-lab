@@ -1,0 +1,38 @@
+*{ 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	 }
+
+.rectangles {
+	outline: 5px solid black;
+    margin: 50px;
+   text-align: center; 
+    position: relative; }
+    
+
+
+.rectangle { 
+
+height: 100px;
+
+outline: 1px solid black;
+color:black }
+
+
+.one { background-color:#41436A; }
+
+.two { background-color:#984063; }
+
+.three { background-color:#F64668;}
+
+.four { background-color:#FE9677;
+	
+}
+
+
+.five { background-color: #FFE3B3; 
+        position: absolute;
+    top: 0%;
+    left: 0% ;
+    right: 0%;}
