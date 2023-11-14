@@ -13,8 +13,10 @@
       Enter the start and length of substr() :
      <input type="text" placeholder="ex: 3" id="t4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <input type="text" placeholder="ex: 6" id="t5"><br><br>
-     Enter the start limit of slice :
-     <input type="text" placeholder="ex: 9" id="t6"><br><br>
+     Enter the start  and end limit of slice :
+     <input type="text" placeholder="ex: 5" id="t6">
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+     <input type="text" placeholder="9" id="t10"><br><br>
      Enter the string to be replaced and replace:
      <input type="text" placeholder="ex: hello" id="t7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
      <input type="text" placeholder="ex: hai" id="t8"><br><br>
@@ -50,6 +52,7 @@
             var n3 = document.getElementById("t4").value;
             var n4 = document.getElementById("t5").value;
             var n5 = document.getElementById("t6").value;
+            var n6 = document.getElementById("t10").value;
             var text2 = document.getElementById("t7").value;
             var text3 = document.getElementById("t8").value;
             var text4 = document.getElementById("t9").value;
@@ -59,8 +62,8 @@
             document.getElementById("demo1").innerHTML =  text1.substring(n1,n2)
             document.getElementById("d2").innerHTML = "substr("+n3+","+n4+")";
             document.getElementById("demo2").innerHTML = text1.substr(n3,n4);
-            document.getElementById("d3").innerHTML = "slice("+n5+")";
-            document.getElementById("demo3").innerHTML = text1.slice(n5);
+            document.getElementById("d3").innerHTML = "slice("+n5+","+n6+")";
+            document.getElementById("demo3").innerHTML = text1.slice(n5,n6);
             document.getElementById("d4").innerHTML = "replace("+text2+","+text3+")";
             document.getElementById("demo4").innerHTML = text1.replace(text2,text3);
             document.getElementById("d5").innerHTML = "concat()";

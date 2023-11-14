@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form name="f1" method="post" onsubmit="return validate();">
+		<label for="t1">Enter the First Name:</label>
+		<input type="text" id="t1" placeholder="ajith" required><br><br>
+		<label for="t2">Enter the Last Name:</label>
+		<input type="text" id="t2" placeholder="sankar"><br><br>
+		<label for="t3">Enter the Email:<label>
+		<input type="text" id="t3" placeholder="example@gmail.com" required><br><br>
+		<label for="t4">Enter the Phone Number:</label>
+        <input type="text" id="t4" placeholder="9992393421" required><br><br>
+        <label for="t5">Enter the Password:</label>
+        <input type="text" id="t5" placeholder="Passw0rd#123" required><br><br>
+        <label for="t6">Enter the Addres:</label><br>
+        <textarea id="t6" rows="5" cols="40"></textarea>
+        <button value="submit">Submit</button>
+	</form>
+	<script type="text/javascript">
+		function validate()
+		{
+          let a = document.forms["f1"]["t1"].value;
+		  if (a == "") {
+		    alert("Name must be filled out");
+		    return false;
+		  }
+          let b = document.forms["f1"]["t2"].value;
+		  if (b == "") {
+		    alert("if you don't have a lastname just cancel");
+		    return false;
+		  }
+		}
+		let c = document.forms["f1"]["t3"].value;
+		  if (c == "") {
+		    alert("Email must be filled out");
+		    return false;
+		  }
+		}
+
+	</script>
+
+</body>
+</html>    
