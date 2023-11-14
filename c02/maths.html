@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="utf-8">
+<title>String and Math functions</title>
+</head>
+<body>
+     Enter a Number:
+     <input type="text" placeholder="ex:23.5" id="t1"><br><br>
+     Enter which power to be calculated:
+     <input type="text" placeholder="ex: 2" id="t2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+      Enter 2 values for min() and max functions: 
+     <input type="text" placeholder="ex:34" id="t3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="text" placeholder="ex:89" id="t4">
+     <br><br>
+     
+     <button type="button" onclick="string();">Submit</button>
+
+    <h1 align="center" id="h12"></h1>
+    <h2 id="str1"></h2><br>
+    <h3 style="color:red;" id="d1"><b></b></h3>
+    <p id="demo1"></p>
+    <h3 style="color:red" id="d2" ><b></b></h3>
+    <p id="demo2"></p>
+    <h3 style="color:red" id="d3"><b></b></h3>
+    <p id="demo3"></p>
+    <h3 style="color:red" id="d4"><b></b></h3>
+    <p id="demo4"></p>
+    <h3 style="color:red" id="d5"><b></b></h3>
+    <p id="demo5"></p>
+    <h3 style="color:red" id="d6"><b></b></h3>
+    <p id="demo6"></p>
+    <h3 style="color:red" id="d7"><b></b></h3>
+    <p id="demo7"></p>
+    <h3 style="color:red" id="d8"><b></b></h3>
+    <p id="demo8"></p>
+    <h3 style="color:red" id="d9"><b></b></h3>
+    <p id="demo9"></p>
+    <h3 style="color:red" id="d10"><b></b></h3>
+    <p id="demo10"></p>
+    <h3 style="color:red" id="d11"><b></b></h3>
+    <p id="demo11"></p>
+    <h3 style="color:red" id="d12"><b></b></h3>
+    <p id="demo12"></p>
+    <h3 style="color:red" id="d13"><b></b></h3>
+    <p id="demo13"></p>
+
+    <script>
+
+        function string(){
+            var num_value= document.getElementById("t1").value;
+            var startvalue=document.getElementById("t3").value;
+            var endvalue=document.getElementById("t4").value;
+            var powervalue=document.getElementById("t2").value;
+
+            
+            document.getElementById("h12").innerHTML = "Math Functions";
+             // document.getElementById("str1").innerHTML = num_value;
+            document.getElementById("d1").innerHTML = "round("+num_value+")";
+            document.getElementById("demo1").innerHTML = Math.round(num_value);
+            document.getElementById("d2").innerHTML = "ceil("+num_value+")";
+            document.getElementById("demo2").innerHTML =Math.ceil(num_value);
+            document.getElementById("d3").innerHTML = "floor("+num_value+")";
+            document.getElementById("demo3").innerHTML = Math.floor(num_value);
+            document.getElementById("d4").innerHTML = "trunc("+num_value+")";
+            document.getElementById("demo4").innerHTML = Math.trunc(num_value);
+            document.getElementById("d5").innerHTML = "sign("+num_value+")";
+            document.getElementById("demo5").innerHTML = Math.sign(num_value);
+            document.getElementById("d6").innerHTML = "power ("+num_value+","+powervalue+")";
+            document.getElementById("demo6").innerHTML = Math.pow(num_value,powervalue); 
+            document.getElementById("d7").innerHTML = "square root("+num_value+")";
+            document.getElementById("demo7").innerHTML = Math.sqrt(num_value);
+            document.getElementById("d8").innerHTML = "absolute value("+num_value+")";
+            document.getElementById("demo8").innerHTML = Math.abs(num_value);
+            document.getElementById("d9").innerHTML = "minimum value ("+num_value+","+startvalue+","+endvalue+","+powervalue+")";
+            document.getElementById("demo9").innerHTML = Math.min(num_value,startvalue,endvalue,powervalue);
+            document.getElementById("d10").innerHTML = "maximum value ("+num_value+","+startvalue+","+endvalue+","+powervalue+")";
+            document.getElementById("demo10").innerHTML = Math.max(num_value,startvalue,endvalue,powervalue);
+            document.getElementById("d11").innerHTML = "random value()";
+            document.getElementById("demo11").innerHTML = Math.random();
+            document.getElementById("d12").innerHTML = "Log value("+num_value+")";
+            document.getElementById("demo12").innerHTML = Math.log(num_value);
+            document.getElementById("d13").innerHTML = "Log10 value("+num_value+")";
+            document.getElementById("demo13").innerHTML = Math.log10(num_value);
+        }
+    </script>
+
+</body>
+</html>
