@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Background</title>
+	<style type="text/css">
+		body { font-family: sans-serif; 
+		       color: black;}
+
+#demo1 { width: 600px;
+height: 400px;
+margin: 50px auto;
+padding: 20px;
+text-align: center;
+border: 1px solid #ccc;}
+	</style>
+</head>
+<body><div id=demo1><center>
+<h1>JavaScript Eventhandlling for changing background color</h1></center>
+</div>
+<script>
+	var a=document.getElementById("demo1");
+	a.addEventListener('click',()=>{
+	 const colors=['#000000','#14213D','#003049','#D62828','#F77F00','#FCBF49','#FCA311','','#E5E5E5','#FFFFFF'];
+	const randomc=colors[Math.floor(Math.random()*colors.length)];
+    
+	a.style.backgroundColor=randomc;});
+</script>
+</body>
+</html>

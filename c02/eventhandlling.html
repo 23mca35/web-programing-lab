@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event handlling</title>
+</head>
+<body>
+<p>JavaScript multiple Eventhandlling using a  single element</p>
+<button id="btn">Click</button>
+ <p id="demo1"></p>
+<script>
+	var a=document.getElementById("btn");
+	a.addEventListener("mouseover",mouseOver);
+	a.addEventListener("click",mouseClick);
+	a.addEventListener("mouseout",mouseOut);
+
+	function mouseOver() {
+		document.getElementById("demo1").innerHTML += "mouse Over<br>";
+	    
+	}
+
+	function mouseClick() {
+	  	document.getElementById("demo1").innerHTML +="Mouse Click<br>";
+	}
+
+	function mouseOut() {
+	    document.getElementById("demo1").innerHTML +="Mouse Out<br>";
+	}
+</script>
+</body>
+</html>
