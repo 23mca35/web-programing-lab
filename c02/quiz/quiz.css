@@ -1,0 +1,45 @@
+input{
+height: 15px;
+width: 15px;
+margin-left:20px;
+margin-right: 20px;
+background-color: red;
+}
+
+#container{
+font-size: 15px;
+padding-left: 25%;
+}
+.q{
+padding-top: 10px;
+padding-bottom: 10px;
+width: 70%;
+background: ghostwhite;
+border-style: groove;
+border-radius: 20px;
+margin-bottom: 30px;
+padding-left: 20px;
+}
+
+label{
+width: 95%;
+display: block;
+border-radius: 7px;
+border: 1px none #ccc;
+background-color: ghostwhite;
+}
+
+#d1{
+font-size: 40px;
+color: black;
+text-align: center;
+margin-bottom: 40px;
+margin-top: 20px;
+}
+input[type=radio]{
+            accent-color: #FF0000;
+        }
+#btn{
+text-align: center;
+text-decoration: none;
+}

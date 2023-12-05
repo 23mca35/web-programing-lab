@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style type="text/css">
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+#container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    color: #333;
+}
+
+center {
+    margin-bottom: 20px;
+}
+</style>
 </head>
 <body>
-	<form name="f1" method="post" onsubmit="return validate();">
-		<label for="t1">Enter the Username:</label>
-		<input type="text" id="t1" placeholder="ajith" required><br><br>
-		<label for="t2">Enter the Email:<label>
-		<input type="text" id="t2" placeholder="example@gmail.com" required><br><br>
-		<label for="t3">Enter the Phone Number:</label>
+<center><h1>Registration form</h1></center>
+<div id="container">
+<form name="f1" method="post" onsubmit="return validate();">
+<label for="t1">Enter the Name:</label>
+<input type="text" id="t1" placeholder="ajith" required><br><br>
+<label for="t2">Enter the Email:<label>
+<input type="email" id="t2" placeholder="example@gmail.com" required><br><br>
+<label for="t3">Enter the Phone Number:</label>
         <input type="text" id="t3" placeholder="9992393421" required><br><br>
         <label for="t4">Enter the Password:</label>
-        <input type="text" id="t4" placeholder="Passw0rd#123" required><br><br>
-        <label for="t5">Enter the Addres:</label><br>
-        <textarea id="t5" rows="5" cols="40"></textarea>
-        <br>
-        <br>
+        <input type="Password" id="t4" placeholder="Passw0rd#123" required><br><br>
+         <label for="t5">Confirm the Password:</label>
+        <input type="Password" id="t5" placeholder="Passw0rd#123" required><br><br>
         <button value="submit">Submit</button>
-	</form>
-	<script type="text/javascript">
-		function validate()
-		{
-		  let regex = /^[a-zA-Z]+$/; 
+</form>
+</div>
+<script type="text/javascript">
+function validate()
+{
+ let regex = /^[a-zA-Z]+$/;
           let a = document.forms["f1"]["t1"].value;
-		  if (a == "") {
-		    alert("Name must be filled out");
-		    return false;
-		  }
-          let b = document.forms["f1"]["t2"].value;
-		  if (b == "") {
-		    alert("if you don't have a lastname just cancel");
-		    return false;
-		  }
-		let c = document.forms["f1"]["t3"].value;
-		  if (c == "") {
-		    alert("Email must be filled out");
-		    return false;
-		  }
-        let d = document.forms["f1"]["t4"].value;
-		  if (d == "") {
-		    alert("Email must be filled out");
-		    return false;
-		  }
-		}
-	</script>
+ if (regex.test(a)==false) {
+   alert("Name must only contain letters");
+   return false;
+ }
+let b = document.forms["f1"]["t2"].value;
+ if (b == "") {
+   alert("Email must be filled out");
+   return false;
+ }
+        let c = document.forms["f1"]["t3"].value;
+         var phoneno = /^\d{10}$/;
+ if (phoneno.test(c)==false) {
+   alert("Phone number should have 10 digits");
+   return false;
+ }
+let d= document.forms["f1"]["t4"].value;
+ if (d.length<8) {
+   alert("Password must have atleast 8 character");
+   return false;
+ }
+ let e= document.forms["f1"]["t5"].value;
+ if (e!==d) {
+   alert("Password is not same");
+   return false;
+ }
+ a.style.background="green"
+}
+</script>
 
 </body>
 </html>    

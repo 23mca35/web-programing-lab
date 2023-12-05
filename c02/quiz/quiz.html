@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz</title>
+<link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+<body>
+<div id="d1">Quiz</div>
+<div id="container">
+   <div class="q">
+    1. Which of the following keywords is used to define a variable in Javascript?<br><br>
+    <label >a)<input type="radio" id="q11"  name="q1" value=false>Var</label><br><br>
+       <label >b)<input type="radio" id="q12"  name="q1"  value=false>Let</label><br><br>
+       <label id="1">c)<input type="radio" id="q13"  name="q1"  value=true>Both A and B</label><br><br>
+       <label>d)<input type="radio" id="q14"  name="q1"  value=false>None of the above</label><br>
+   </div>
+   <div class="q">
+    2. HTML stands for ______:<br><br>
+    <label>a)<input type="radio" id="q21"  name="q2" value=false>HighText Machine Languag</label><br><br>
+       <label id="2">b)<input type="radio" id="q22"  name="q2"  value=true>HyperText Markup Language</label><br><br>
+       <label>c)<input type="radio" id="q23"  name="q2"  value=false>HyperText and links Markup Language</label><br><br>
+       <label>d)<input type="radio" id="q24"  name="q2"  value=false>None of the above</label><br>
+   </div>
+   <div class="q">
+    3. Which character is used to represent the closing of a tag in HTML?<br><br>
+    <label>a)<input type="radio" id="q31"  name="q3" value=false>\<br><br></label>
+       <label>b)<input type="radio" id="q32"  name="q3"  value=false>!<br><br></label>
+      <label> c)<input type="radio" id="q33"  name="q3"  value=false>.<br><br></label>
+      <label id="3"> d)<input type="radio" id="q34"  name="q3"  value=true>/<br></label>
+   </div>
+   <div class="q">
+    4. Which of the following attribute is used to provide a unique name to an element?<br><br>
+    <label>a)<input type="radio" id="q41"  name="q4" value=false>class</label><br><br>
+       <label id="4">b)<input type="radio" id="q42"  name="q4"  value=true>id</label><br><br>
+       <label>c)<input type="radio" id="q43"  name="q4"  value=false>type</label><br><br>
+       <label>d)<input type="radio" id="q44"  name="q4"  value=false>None of the above</label><br>
+   </div>
+   <div class="q">
+    5. An HTML program is saved by using the ____ extension.<br><br>
+    <label>a)<input type="radio" id="q51"  name="q5" value=false>.ht</label><br><br>
+       <label>b)<input type="radio" id="q52"  name="q5"  value=false>.hml</label><br><br>
+       <label id="5">c)<input type="radio" id="q53"  name="q5"  value=true>.html</label><br><br>
+       <label>d)<input type="radio" id="q54"  name="q5"  value=false>None of the above</label><br>
+   </div>
+   <a href="#d1"><button id="btn" onclick="result()">Submit</button></a>
+</div>
+<script type="text/javascript">
+    function result()
+{
+var score=0;
+if(document.getElementById('q13').checked)
+{
+score++;
+}
+if(document.getElementById('q22').checked)
+{
+score++;
+}
+if(document.getElementById('q34').checked)
+{
+score++;
+}
+if(document.getElementById('q42').checked)
+{
+score++;
+}
+if(document.getElementById('q53').checked)
+{
+score++;
+}
+        document.getElementById('1').style.backgroundColor="green";
+         document.getElementById('2').style.backgroundColor="green";
+          document.getElementById('3').style.backgroundColor="green";
+           document.getElementById('4').style.backgroundColor="green";
+            document.getElementById('5').style.backgroundColor="green";
+        document.getElementById('d1').innerHTML="You have Scored: "+score+"/5";
+}
+</script>
+</script>
+</body>
+</html>
